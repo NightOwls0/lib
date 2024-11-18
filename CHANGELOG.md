@@ -1,5 +1,11 @@
 # lib
 
+## 0.0.4
+
+### Patch Changes
+
+- f768f3c: test
+
 ## 0.0.3
 
 ### Patch Changes
