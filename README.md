@@ -1,6 +1,6 @@
 # create-svelte
 
-![NPM Version](https://img.shields.io/npm/v/:owls-lib)
+![NPM Version](https://img.shields.io/npm/v/owls-lib)
 
 Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
