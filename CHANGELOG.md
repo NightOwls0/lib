@@ -1,5 +1,12 @@
 # lib
 
+## 0.0.6
+
+### Patch Changes
+
+- 9014074: add e
+- 9014074: test
+
 ## 0.0.5
 
 ### Patch Changes
