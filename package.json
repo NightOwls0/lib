@@ -15,7 +15,7 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check .",
 		"changeset:version": "changeset version && git add --all",
-		"changeset:release": "changeset publish",
+		"changeset:release": "changeset publish --provenance=false",
 		"release": "node ./scripts/release.js"
 	},
 	"files": [
