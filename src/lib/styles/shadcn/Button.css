@@ -1,0 +1,40 @@
+.button {
+    @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md font-medium ring-offset-black transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0;
+}
+.button-variant-primary {
+    @apply bg-black text-white hover:bg-black/90;
+}
+
+.button-variant-secondary {
+    @apply bg-gray-300 text-black hover:bg-gray-300/80;
+}
+
+.button-variant-ghost {
+    @apply hover:bg-gray-100 hover:text-black;
+}
+.button-variant-outline {
+    @apply border border-gray-300 bg-transparent hover:bg-gray-100 ;
+}
+
+.button-variant-link {
+    @apply text-black underline-offset-4 hover:underline;
+}
+.button-variant-destructive {
+    @apply bg-red-600 text-white hover:bg-red-600/80;
+}
+
+.button-size-default:not(.button-icon) {
+    @apply h-10 px-4 py-2 text-sm;
+}
+
+.button-size-sm:not(.button-icon) {
+    @apply h-6 rounded-md px-2 text-xs;
+}
+
+.button-size-default.button-icon {
+    @apply h-10 w-10;
+}
+
+.button-size-sm.button-icon {
+    @apply h-6 w-6;
+}
