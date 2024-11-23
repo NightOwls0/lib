@@ -7,6 +7,7 @@
 		variant: 'primary' | 'ghost' | 'secondary' | 'link' | 'destructive';
 		size: 'default' | 'sm' | 'icon';
 		icon: boolean;
+		type: 'button' | 'submit'
 		children: Snippet;
 	}
 
@@ -15,6 +16,7 @@
 		size = 'default',
 		icon,
 		variant = 'primary',
+		type = 'button',
 		children,
 		...rest
 	}: $$Props | any = $props();
@@ -23,6 +25,7 @@
 		...rest,
 		href,
 		tag: href ? 'a' : 'button',
+		type,
 		name: 'button',
 		css: {
 			variant, size, icon
