@@ -1,17 +1,21 @@
 <script>
-	import Preview from '$lib/Preview.svelte'
+	import Preview from '$lib/Preview.svelte';
 	import Badge from '$lib/components/Badge.svelte';
 	import Alert from '$lib/components/Alert.svelte';
-	import Button from '$lib/components/Button.svelte'
+	import Button from '$lib/components/Button.svelte';
+	import Tabs from '$lib/components/Tabs/Tabs.svelte';
+	import TabHeader from '$lib/components/Tabs/TabHeader.svelte';
+	import TabItem from '$lib/components/Tabs/TabItem.svelte';
+	import TabContent from '$lib/components/Tabs/TabContent.svelte';
+	import TabPanel from '$lib/components/Tabs/TabPanel.svelte';
 </script>
-<div class="mx-auto container py-8 px-4">
+
+<div class="container mx-auto px-4 py-8">
 	<h1 class="text-3xl font-bold">Components</h1>
 
 	<Preview title="Alert">
-		<Alert icon="T" title="Heads up!">
-			You can add components to your app using the cli.
-		</Alert>
-		<br/>
+		<Alert icon="T" title="Heads up!">You can add components to your app using the cli.</Alert>
+		<br />
 		<Alert variant="destructive" icon="T" title="Error">
 			Your session has expired. Please log in again.
 		</Alert>
@@ -37,5 +41,31 @@
 		<Button variant="primary" icon>I</Button>
 	</Preview>
 
+	<Preview title="Tabs">
+		<Tabs active="General">
+			<TabHeader>
+				<TabItem name="General" />
+				<TabItem name="SEO" />
+				<TabItem name="Settings" />
+			</TabHeader>
+			<TabContent>
+				<TabPanel name="General">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sequi excepturi reiciendis?
+					Totam necessitatibus nisi dignissimos voluptatem iure esse culpa sint asperiores commodi
+					rem inventore, cupiditate libero officia dolorem adipisci iusto sed saepe quasi. Nemo,
+					sunt. Provident quo sit exercitationem quaerat illum numquam? Incidunt facere quasi minus
+					sint ea? Possimus.
+				</TabPanel>
+				<TabPanel name="SEO">
+					dipisicing elit. Ex sequi excepturi reiciendis? Totam necessitatibus nisi dignissimos
+					voluptatem iure esse culpa sint asperiores commodi rem inventore, cupiditate libero
+					officia dolorem adipisci iusto sed saepe quasi. Nemo, sunt. Provident quo sit
+					exercitationem quaerat illum numquam? Incidunt facere quasi minus sint ea? Possimus.
+				</TabPanel>
+				<TabPanel name="Settings">
+					Lorem ipsum dolor sit amet consectetur adidsf asdfasdofijasdf asdfasdfasdf
+				</TabPanel>
+			</TabContent>
+		</Tabs>
+	</Preview>
 </div>
-

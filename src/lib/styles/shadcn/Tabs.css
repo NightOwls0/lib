@@ -1,0 +1,40 @@
+.tabs {
+    @apply flex flex-col gap-4 lg:flex-row;
+}
+
+.tab-item {
+    @apply inline-flex h-9 items-center justify-start gap-2 whitespace-nowrap rounded-md px-4 py-2 text-sm font-medium transition-colors hover:text-black focus-visible:outline-none focus-visible:ring-1;
+}
+.tab-item-disabled {
+    @apply disabled:pointer-events-none disabled:opacity-50;
+}
+.tab-item-error {
+    @apply  text-red-500;
+}
+.tab-item-active {
+    @apply bg-gray-200 hover:bg-gray-200;
+}
+
+.tab-item:not(.tab-item-active) {
+    @apply hover:bg-transparent hover:underline;
+}
+
+.tab-panel {
+    @apply hidden;
+}
+
+.tab-panel-active {
+    @apply block;
+}
+
+.tab-header {
+    @apply lg:w-1/5;
+} 
+
+.tab-list {
+    @apply flex space-x-2 lg:flex-col lg:space-x-0 lg:space-y-1; 
+}
+
+.tab-content {
+    @apply w-full;
+}

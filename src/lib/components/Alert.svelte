@@ -1,11 +1,10 @@
 <script>
 	import Base from "./Base.svelte";
-    let {title, icon, children, variant = 'default', ...rest} = $props()
+    let {title, icon, children, variant = 'default', ...restProps} = $props()
 
     let baseProps = $derived({
-        ...rest,
+        restProps,
         name: 'alert',
-        tag: 'div',
         css: {variant}
     })
 

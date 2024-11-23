@@ -1,17 +1,18 @@
 <script>
-	import Base from "./Base.svelte";
+	import Base from './Base.svelte';
 
-    let {variant = 'primary', children, ...rest} = $props()
+	let { variant = 'primary', children, ...restProps } = $props();
 
-    let baseProps = $derived({
-        ...rest,
-        tag: 'span',
-        name: 'badge',
-        css: {
-            variant,
-        }
-    })
+	let baseProps = $derived({
+		restProps,
+		tag: 'span',
+		name: 'badge',
+		css: {
+			variant
+		}
+	});
 </script>
+
 <Base {baseProps}>
-    {@render children()}
+	{@render children()}
 </Base>

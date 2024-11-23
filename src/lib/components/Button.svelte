@@ -18,11 +18,11 @@
 		variant = 'primary',
 		type = 'button',
 		children,
-		...rest
+		...restProps
 	}: $$Props | any = $props();
 
 	let baseProps = $derived({
-		...rest,
+		restProps,
 		href,
 		tag: href ? 'a' : 'button',
 		type,
