@@ -8,6 +8,13 @@
 	import TabItem from '$lib/components/Tabs/TabItem.svelte';
 	import TabContent from '$lib/components/Tabs/TabContent.svelte';
 	import TabPanel from '$lib/components/Tabs/TabPanel.svelte';
+	import Modal from '$lib/components/Modal/Modal.svelte';
+	import ModalContent from '$lib/components/Modal/ModalContent.svelte';
+
+	let modalOpen = $state(false);
+	function openModal() {
+		modalOpen = true
+	}
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -67,5 +74,14 @@
 				</TabPanel>
 			</TabContent>
 		</Tabs>
+	</Preview>
+	<Preview title="Modal">
+		<Button onclick={openModal}>Open modal</Button>
+		<Modal bind:open={modalOpen}>
+			<ModalContent>
+				This is modal content
+			</ModalContent>
+		</Modal>
+		
 	</Preview>
 </div>
