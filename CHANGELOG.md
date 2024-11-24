@@ -1,5 +1,14 @@
 # lib
 
+## 0.0.8
+
+### Patch Changes
+
+- 8a44b89: Add Modal component
+- d15fa4a: Add type property for Button component
+- 3e0dcba: Add Tab components
+- 3b0f6dc: Export missing components
+
 ## 0.0.7
 
 ### Patch Changes
