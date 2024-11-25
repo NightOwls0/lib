@@ -1,5 +1,12 @@
 # lib
 
+## 0.1.0
+
+### Minor Changes
+
+- 8033d63: Add BaseIcon component
+- 5c96214: Add Confirm component
+
 ## 0.0.8
 
 ### Patch Changes
