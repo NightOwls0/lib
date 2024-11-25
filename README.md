@@ -8,25 +8,28 @@ These components are usable everywhere. other components like Sidebar, SidebarIt
 not used in pages. we don't need to make them components. when we needed them, we will use it's
 tailwnd code directly
 
-[ ] Alert
-[ ] Badge
-[ ] Button
-[ ] Card + CardBody + CardHeader + CardFooter
-[ ] Dropdown + DropdownMenu + DropdownItem
-[ ] Form
-[ ] Checkbox
-[ ] CheckboxGroup
-[ ] Input
-[ ] Label
-[ ] RadioGroup
-[ ] Select
-[ ] Textarea
-[ ] Gridding System (Container, Row, Col) cols from 1 to 12 col/colMd/colLg
-[ ] Icon (tabler-icons or iconify icons or other library...)
-[ ] Modal + ModalBody + ModalHeader + ModalFooter
-[ ] Popover + PopoverBody
-[ ] Spinner
-[ ] Tabs
-[ ] Tooltip
-[ ] RichTextEditor
-[ ] DataTable (Pagination, Filter buttons, ...)
+- [x] Alert
+- [x] Badge
+- [x] Button
+- [x] Icon
+- [x] Modal + ModalBody + ModalHeader + ModalFooter
+- [x] Confirm
+- [x] Tabs
+- [ ] Card + CardBody + CardHeader + CardFooter
+- [ ] Dropdown + DropdownMenu + DropdownItem
+- [ ] Gridding System (Container, Row, Col) cols from 1 to 12 col/colMd/colLg
+- [ ] Popover + PopoverBody
+- [ ] Spinner
+- [ ] Tooltip
+- [ ] DataTable (Pagination, Filter buttons, ...)
+
+## Form components
+- [ ] Form
+- [ ] Checkbox
+- [ ] CheckboxGroup
+- [ ] Input
+- [ ] Label
+- [ ] RadioGroup
+- [ ] Select
+- [ ] Textarea
+- [ ] RichTextEditor
