@@ -11,6 +11,7 @@
 	import TabPanel from '$lib/components/Tabs/TabPanel.svelte';
 	import Modal from '$lib/components/Modal/Modal.svelte';
 	import ModalContent from '$lib/components/Modal/ModalContent.svelte';
+	import Confirm from '$lib/components/Confirm.svelte';
 
 	const icons = {
 		lucideCirclePlus: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8m-4-4v8"/></g></svg>',
@@ -22,6 +23,10 @@
 	let modalOpen = $state(false);
 	function openModal() {
 		modalOpen = true
+	}
+	let confirmOpen = $state(false);
+	function openConfirm() {
+		confirmOpen = true
 	}
 </script>
 
@@ -90,6 +95,13 @@
 				This is modal content
 			</ModalContent>
 		</Modal>
+		
+	</Preview>
+	<Preview title="Confirm">
+		<Button onclick={openConfirm}>Open Confirm</Button>
+		<Confirm bind:open={confirmOpen}>
+			This is Confirm content
+		</Confirm>
 		
 	</Preview>
 	<Preview title="Icon">

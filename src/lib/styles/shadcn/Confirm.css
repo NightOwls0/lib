@@ -1,0 +1,43 @@
+.confirm {
+    @apply fixed transition-all inset-0 z-50 bg-black/80;
+}
+
+.confirm.confirm-open {
+    /* @apply animate-in fade-in-0 */
+    @apply opacity-100;
+
+}
+
+.confirm:not(.confirm-open) {
+    @apply opacity-0 pointer-events-none;    
+    /* @apply animate-out fade-out-0; */
+}
+
+.confirm-content {
+    @apply w-full max-w-md rounded-lg bg-white p-6 shadow-lg;
+}
+
+.confirm-content {
+    @apply fixed transition-all left-[50%] top-[50%] z-50 grid w-full max-w-lg translate-x-[-50%] translate-y-[-50%] gap-4 border bg-white p-6 shadow-lg duration-200 sm:rounded-lg;
+}
+
+.confirm.confirm-open .confirm-content {
+    @apply scale-100 opacity-100;
+    /* @apply fade-in-0 zoom-in-95 slide-in-from-left-1/2 slide-in-from-top-[48%]; */
+    /* animate-in */
+}
+
+.confirm:not(.confirm-open) .confirm-content {
+    @apply scale-90 opacity-50;
+    /* @apply fade-out-0 zoom-out-95 slide-out-to-left-1/2 slide-out-to-top-[48%]; */
+    /* animate-out */
+}
+
+.confirm-close-button {
+    @apply absolute right-4 top-4 w-6 h-6 flex items-center justify-center rounded-sm opacity-70 cursor-pointer transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none;
+    /* ring-offset-background  focus:ring-ring */
+}
+
+.confirm-open .confirm-close-button {
+    @apply bg-gray-200 text-gray-500;
+}
