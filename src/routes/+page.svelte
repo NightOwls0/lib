@@ -3,6 +3,7 @@
 	import Badge from '$lib/components/Badge.svelte';
 	import Alert from '$lib/components/Alert.svelte';
 	import Button from '$lib/components/Button.svelte';
+	import Icon from '$lib/components/BaseIcon.svelte';
 	import Tabs from '$lib/components/Tabs/Tabs.svelte';
 	import TabHeader from '$lib/components/Tabs/TabHeader.svelte';
 	import TabItem from '$lib/components/Tabs/TabItem.svelte';
@@ -10,6 +11,13 @@
 	import TabPanel from '$lib/components/Tabs/TabPanel.svelte';
 	import Modal from '$lib/components/Modal/Modal.svelte';
 	import ModalContent from '$lib/components/Modal/ModalContent.svelte';
+
+	const icons = {
+		lucideCirclePlus: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8m-4-4v8"/></g></svg>',
+		lucideSunMedium: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 3v1m0 16v1m-9-9h1m16 0h1m-2.636-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707"/></g></svg>',
+		elCheck: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 1200 1200"><path fill="currentColor" d="M0 0v1200h1200V424.289l-196.875 196.875v381.961h-806.25v-806.25h381.961L775.711 0zm1030.008 15.161l-434.18 434.25L440.7 294.283L281.618 453.438L595.821 767.57l159.082-159.082l434.18-434.25l-159.082-159.081z"/></svg>',
+		tablerAlien: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 17a2.5 2.5 0 0 0 2 0"/><path d="M12 3C7.336 3 4.604 5.331 4.138 8.595a11.82 11.82 0 0 0 2 8.592a10.8 10.8 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.8 10.8 0 0 0 3.199-3.064a11.9 11.9 0 0 0 2-8.592C19.4 5.33 16.668 3 12.004 3zm-4 8l2 2m6-2l-2 2"/></g></svg>'
+	}
 
 	let modalOpen = $state(false);
 	function openModal() {
@@ -84,4 +92,34 @@
 		</Modal>
 		
 	</Preview>
+	<Preview title="Icon">
+		<span>You can use text color to set color of icon. and sizing classes of tailwind to resize icons</span>
+		<br/>
+		<br/>
+		<Icon {icons} name="elCheck" />
+		<Icon {icons} name="lucideCirclePlus" />
+		<Icon {icons} name="tablerAlien" />
+		<Icon {icons} name="lucideSunMedium" />
+		<Icon {icons} class="w-10 h-10" name="lucideSunMedium" />
+		<Icon {icons} class="w-20 h-20 text-orange-500" name="lucideSunMedium" />
+		<br/>
+
+		<span>You should create your own icon component for your project and define icons in $lib/icons.ts file</span>
+
+		<br/>
+<span class="block pt-4 font-bold">$lib/components/Icon.svelte</span>
+		<pre class="rounded border border-gray-300 bg-gray-200 p-2"><code>{'<'}script lang="ts"{'>'}
+	import {'{'} BaseIcon {'}'} from 'owls-lib'
+	import icons from '$lib/icons'
+
+    let {'{'} name, ...restProps {'}'} = $props()
+{'<'}/script{'>'}
+
+{'<'}BaseIcon {'{'}...restProps{'}'} {'{'}icons{'}'} {'{'}name{'}'}/{'>'}</code></pre>
+
+<span class="block pt-4 font-bold">icons.ts</span>
+<pre class="rounded border border-gray-300 bg-gray-200 p-2"><code>export default {'{'}
+	nameOfIcon: '{'<'}svg{'>'}...{'<'}/svg{'}'}',
+	nameOfAnotherIcon: '{'<'}svg{'>'}...{'<'}/svg{'}'}',
+{'}'}</Preview>
 </div>

@@ -3,6 +3,7 @@
 export {default as Badge} from './components/Badge.svelte'
 export {default as Alert} from './components/Alert.svelte'
 export {default as Button} from './components/Button.svelte'
+export {default as Icon} from './components/BaseIcon.svelte'
 export {default as Tabs} from './components/Tabs/Tabs.svelte'
 export {default as TabPanel} from './components/Tabs/TabPanel.svelte'
 export {default as TabItem} from './components/Tabs/TabItem.svelte'

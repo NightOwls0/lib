@@ -1,0 +1,3 @@
+.base-icon {
+    @apply w-[1em] h-[1em] inline-block;
+}
