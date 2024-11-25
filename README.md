@@ -14,13 +14,13 @@ tailwnd code directly
 [ ] Card + CardBody + CardHeader + CardFooter
 [ ] Dropdown + DropdownMenu + DropdownItem
 [ ] Form
-    [ ] Checkbox
-    [ ] CheckboxGroup
-    [ ] Input
-    [ ] Label
-    [ ] RadioGroup
-    [ ] Select
-    [ ] Textarea
+[ ] Checkbox
+[ ] CheckboxGroup
+[ ] Input
+[ ] Label
+[ ] RadioGroup
+[ ] Select
+[ ] Textarea
 [ ] Gridding System (Container, Row, Col) cols from 1 to 12 col/colMd/colLg
 [ ] Icon (tabler-icons or iconify icons or other library...)
 [ ] Modal + ModalBody + ModalHeader + ModalFooter
