@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Preview from '$lib/Preview.svelte';
 	import Badge from '$lib/components/Badge.svelte';
 	import Alert from '$lib/components/Alert.svelte';
@@ -12,6 +12,8 @@
 	import Modal from '$lib/components/Modal/Modal.svelte';
 	import ModalContent from '$lib/components/Modal/ModalContent.svelte';
 	import Confirm from '$lib/components/Confirm.svelte';
+	import DropdownItem from '$lib/components/Dropdown/DropdownItem.svelte';
+	import DropdownMenu from '$lib/components/Dropdown/DropdownMenu.svelte';
 
 	const icons = {
 		lucideCirclePlus: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12h8m-4-4v8"/></g></svg>',
@@ -19,6 +21,9 @@
 		elCheck: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 1200 1200"><path fill="currentColor" d="M0 0v1200h1200V424.289l-196.875 196.875v381.961h-806.25v-806.25h381.961L775.711 0zm1030.008 15.161l-434.18 434.25L440.7 294.283L281.618 453.438L595.821 767.57l159.082-159.082l434.18-434.25l-159.082-159.081z"/></svg>',
 		tablerAlien: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M11 17a2.5 2.5 0 0 0 2 0"/><path d="M12 3C7.336 3 4.604 5.331 4.138 8.595a11.82 11.82 0 0 0 2 8.592a10.8 10.8 0 0 0 3.199 3.064c1.666 1 3.664 1 5.33 0a10.8 10.8 0 0 0 3.199-3.064a11.9 11.9 0 0 0 2-8.592C19.4 5.33 16.668 3 12.004 3zm-4 8l2 2m6-2l-2 2"/></g></svg>'
 	}
+
+	let dropdownOpen = $state(false);
+	let dropdownValue: any = $state(undefined);
 
 	let modalOpen = $state(false);
 	function openModal() {
@@ -102,7 +107,28 @@
 		<Confirm bind:open={confirmOpen}>
 			This is Confirm content
 		</Confirm>
-		
+	</Preview>
+	<Preview title="Dropdown">
+		<Button>Open Dropdown</Button>
+		<DropdownMenu>
+			<DropdownItem>Item 1</DropdownItem>
+			<DropdownItem>Item 2</DropdownItem>
+			<DropdownItem>Item 3</DropdownItem>
+		</DropdownMenu>
+
+		<Button variant="secondary">Open Dropdown top</Button>
+		<DropdownMenu placement="top-start">
+			<DropdownItem>Item 1</DropdownItem>
+			<DropdownItem>Item 2</DropdownItem>
+			<DropdownItem>Item 3</DropdownItem>
+		</DropdownMenu>
+
+		<Button variant="secondary">State ({dropdownOpen ? 'open' : 'closed'}) ({dropdownValue ?? '---'})</Button>
+		<DropdownMenu bind:open={dropdownOpen} placement="top-start">
+			<DropdownItem onclick={() => {dropdownOpen = false; dropdownValue = 1}}>Item 1</DropdownItem>
+			<DropdownItem disabled onclick={() => {dropdownOpen = false; dropdownValue = 2}}>Item 2</DropdownItem>
+			<DropdownItem onclick={() => {dropdownOpen = false; dropdownValue = 3}}>Item 3</DropdownItem>
+		</DropdownMenu>
 	</Preview>
 	<Preview title="Icon">
 		<span>You can use text color to set color of icon. and sizing classes of tailwind to resize icons</span>
