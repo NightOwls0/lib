@@ -11,7 +11,6 @@
 	import TabPanel from '$lib/components/Tabs/TabPanel.svelte';
 	import Modal from '$lib/components/Modal/Modal.svelte';
 	import ModalContent from '$lib/components/Modal/ModalContent.svelte';
-	import Confirm from '$lib/components/Confirm.svelte';
 	import DropdownItem from '$lib/components/Dropdown/DropdownItem.svelte';
 	import DropdownMenu from '$lib/components/Dropdown/DropdownMenu.svelte';
 
@@ -29,10 +28,7 @@
 	function openModal() {
 		modalOpen = true
 	}
-	let confirmOpen = $state(false);
-	function openConfirm() {
-		confirmOpen = true
-	}
+
 </script>
 
 <div class="container mx-auto px-4 py-8">
@@ -55,7 +51,7 @@
 
 	<Preview title="Button">
 		<Button>Default</Button>
-		<Button variant="secondary">Secondary</Button>
+		<Button class="md:hidden" variant="secondary">Secondary</Button>
 		<Button variant="outline">Outline</Button>
 		<Button variant="ghost">Ghost</Button>
 		<Button variant="link">Link</Button>
@@ -102,12 +98,7 @@
 		</Modal>
 		
 	</Preview>
-	<Preview title="Confirm">
-		<Button onclick={openConfirm}>Open Confirm</Button>
-		<Confirm bind:open={confirmOpen}>
-			This is Confirm content
-		</Confirm>
-	</Preview>
+
 	<Preview title="Dropdown">
 		<Button>Open Dropdown</Button>
 		<DropdownMenu>

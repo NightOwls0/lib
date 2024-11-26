@@ -6,10 +6,11 @@
         baseProps, 
         children
     } = $props();
-    let {tag = 'div', name, css = {}, class: klass, restProps, ...rest} = $derived(baseProps)
+    let {tag = 'div', name, css = {}, restProps = {}, ...rest} = $derived(baseProps)
+    let {class: klass, ...rest2} = $derived(restProps)
 
 </script>
 
-<svelte:element bind:this={element} this={tag} class={cls(name, css, klass)} {...restProps} {...rest}>
+<svelte:element bind:this={element} this={tag} class={cls(name, css, klass)} {...rest} {...rest2}>
     {@render children()}
 </svelte:element>
