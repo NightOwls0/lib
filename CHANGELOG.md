@@ -1,5 +1,11 @@
 # lib
 
+## 0.1.1
+
+### Patch Changes
+
+- 8720eb5: Add Dropdown component
+
 ## 0.1.0
 
 ### Minor Changes
