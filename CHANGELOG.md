@@ -1,5 +1,11 @@
 # lib
 
+## 0.1.2
+
+### Patch Changes
+
+- 6e2da0d: Fix Button and Confirm components
+
 ## 0.1.1
 
 ### Patch Changes
